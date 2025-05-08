@@ -3,7 +3,7 @@ set -euxo pipefail
 
 VORTEX_LINUX="v1.3.4"
 VORTEX_VERSION="1.13.7"
-PROTON_BUILD="GE-Proton9-23"
+PROTON_BUILD="GE-Proton9-27"
 
 PROTON_URL="https://github.com/GloriousEggroll/proton-ge-custom/releases/download/$PROTON_BUILD/$PROTON_BUILD.tar.gz"
 VORTEX_INSTALLER="vortex-setup-$VORTEX_VERSION.exe"
@@ -36,7 +36,7 @@ fi
 ./vortex-linux downloadProton "$PROTON_URL"
 ./vortex-linux setProton "$PROTON_BUILD"
 ./vortex-linux downloadVortex "$VORTEX_URL"
-./vortex-linux protonRunUrl "$DOTNET_URL" /q
+# ./vortex-linux protonRunUrl "$DOTNET_URL" /q
 ./vortex-linux setupVortexDesktop
 ./vortex-linux installVortex "$VORTEX_INSTALLER"
 
@@ -54,13 +54,13 @@ update-desktop-database || true
 
 rm -f ~/Desktop/install-vortex.desktop
 ln -sf ~/.local/share/applications/vortex.desktop ~/Desktop/
-ln -sf ~/.pikdum/steam-deck-master/vortex/skyrim-post-deploy.desktop ~/Desktop/
-ln -sf ~/.pikdum/steam-deck-master/vortex/skyrimle-post-deploy.desktop ~/Desktop/
-ln -sf ~/.pikdum/steam-deck-master/vortex/fallout4-post-deploy.desktop ~/Desktop/
-ln -sf ~/.pikdum/steam-deck-master/vortex/falloutnv-post-deploy.desktop ~/Desktop/
-ln -sf ~/.pikdum/steam-deck-master/vortex/falloutnv-pre-deploy.desktop ~/Desktop/
-ln -sf ~/.pikdum/steam-deck-master/vortex/fallout3-post-deploy.desktop ~/Desktop/
-ln -sf ~/.pikdum/steam-deck-master/vortex/oblivion-post-deploy.desktop ~/Desktop/
+# ln -sf ~/.pikdum/steam-deck-master/vortex/skyrim-post-deploy.desktop ~/Desktop/
+# ln -sf ~/.pikdum/steam-deck-master/vortex/skyrimle-post-deploy.desktop ~/Desktop/
+# ln -sf ~/.pikdum/steam-deck-master/vortex/fallout4-post-deploy.desktop ~/Desktop/
+# ln -sf ~/.pikdum/steam-deck-master/vortex/falloutnv-post-deploy.desktop ~/Desktop/
+# ln -sf ~/.pikdum/steam-deck-master/vortex/falloutnv-pre-deploy.desktop ~/Desktop/
+# ln -sf ~/.pikdum/steam-deck-master/vortex/fallout3-post-deploy.desktop ~/Desktop/
+# ln -sf ~/.pikdum/steam-deck-master/vortex/oblivion-post-deploy.desktop ~/Desktop/
 
 mkdir -p /run/media/mmcblk0p1/vortex-downloads || true
 
