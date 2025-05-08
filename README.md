@@ -8,13 +8,13 @@ hopefully temporary solution until https://github.com/Nexus-Mods/NexusMods.App i
 
 ## install
 
-1. right click and save as [this install.desktop link](https://raw.githubusercontent.com/pikdum/steam-deck/master/install.desktop)
+1. right click and save [this install.desktop link](https://raw.githubusercontent.com/runofthemill/steam-deck/master/install.desktop)
 2. go to the downloads folder, move the `install.desktop` file to the desktop, and double click to run it
 
 or
 
 ``` bash
-curl https://raw.githubusercontent.com/pikdum/steam-deck/master/install.sh | bash -s --
+curl https://raw.githubusercontent.com/runofthemill/steam-deck/master/install.sh | bash -s --
 ```
 
 ## vortex
